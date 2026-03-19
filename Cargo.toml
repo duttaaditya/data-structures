@@ -1,0 +1,14 @@
+[package]
+name = "main"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "two_sums"
+path = "./two-sums.rs"
+
+[[bin]]
+name = "max_pair_product"
+path = "./max_pair_product.rs"
