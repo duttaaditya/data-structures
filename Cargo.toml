@@ -12,3 +12,7 @@ path = "./two-sums.rs"
 [[bin]]
 name = "max_pair_product"
 path = "./max_pair_product.rs"
+
+[[bin]]
+name = "gcd"
+path = "./gcd.rs"
