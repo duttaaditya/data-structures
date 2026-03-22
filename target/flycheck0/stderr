@@ -1,12 +1,202 @@
-   0.011812900s  INFO cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\gcd.rs"
-   0.011853500s  INFO cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\target\\debug\\.fingerprint\\main-e43cd18b3f5ed032\\dep-bin-gcd"
-   0.011860900s  INFO cargo::core::compiler::fingerprint:                FileTime { seconds: 13418508617, nanos: 617573100 } < FileTime { seconds: 13418508619, nanos: 523781300 }
-   0.012016800s  INFO cargo::core::compiler::fingerprint: fingerprint dirty for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: false }/TargetInner { name: "gcd", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./gcd.rs", Edition2021) }
-   0.012039800s  INFO cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\target\\debug\\.fingerprint\\main-e43cd18b3f5ed032\\dep-bin-gcd", reference_mtime: FileTime { seconds: 13418508617, nanos: 617573100 }, stale: "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\gcd.rs", stale_mtime: FileTime { seconds: 13418508619, nanos: 523781300 } }))
-   0.012692500s  INFO cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\gcd.rs"
-   0.012704600s  INFO cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\target\\debug\\.fingerprint\\main-913330a77434128f\\dep-test-bin-gcd"
-   0.012710600s  INFO cargo::core::compiler::fingerprint:                FileTime { seconds: 13418508617, nanos: 617573100 } < FileTime { seconds: 13418508619, nanos: 523781300 }
-   0.012840900s  INFO cargo::core::compiler::fingerprint: fingerprint dirty for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: true }/TargetInner { name: "gcd", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./gcd.rs", Edition2021) }
-   0.012857600s  INFO cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\target\\debug\\.fingerprint\\main-913330a77434128f\\dep-test-bin-gcd", reference_mtime: FileTime { seconds: 13418508617, nanos: 617573100 }, stale: "C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\gcd.rs", stale_mtime: FileTime { seconds: 13418508619, nanos: 523781300 } }))
+   0.053347900s  INFO cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: false }/TargetInner { name: "max_pair_product", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./max_pair_product.rs", Edition2021) }
+   0.053401800s  INFO cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\adutt\Documents\project-library\dsa\data-structures\target\debug\.fingerprint\main-0c41aee0150f2b6d\bin-max_pair_product`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace_rs::backtrace::dbghelp::trace
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/dbghelp.rs:131:5
+   1: std::backtrace_rs::backtrace::trace_unsynchronized
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/mod.rs:66:5
+   2: std::backtrace::Backtrace::create
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:331:13
+   3: std::backtrace::Backtrace::capture
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:296:9
+   4: <core::result::Result<alloc::vec::Vec<u8>, std::io::error::Error> as anyhow::Context<alloc::vec::Vec<u8>, std::io::error::Error>>::with_context::<alloc::string::String, cargo_util::paths::read_bytes::{closure#0}>
+   5: cargo_util::paths::read
+   6: cargo::core::compiler::fingerprint::prepare_target
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::context::Context>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\core\src\ops/function.rs:284:13
+  17: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  18: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  19: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:48
+  21: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  22: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  23: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  24: std::rt::lang_start_internal
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:20
+  25: main
+  26: __tmainCRTStartup
+  27: mainCRTStartup
+  28: <unknown>
+  29: <unknown>
+   0.082454100s  INFO cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: true }/TargetInner { name: "max_pair_product", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./max_pair_product.rs", Edition2021) }
+   0.082476400s  INFO cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\adutt\Documents\project-library\dsa\data-structures\target\debug\.fingerprint\main-2a2a94c9c84c0dae\test-bin-max_pair_product`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace_rs::backtrace::dbghelp::trace
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/dbghelp.rs:131:5
+   1: std::backtrace_rs::backtrace::trace_unsynchronized
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/mod.rs:66:5
+   2: std::backtrace::Backtrace::create
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:331:13
+   3: std::backtrace::Backtrace::capture
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:296:9
+   4: <core::result::Result<alloc::vec::Vec<u8>, std::io::error::Error> as anyhow::Context<alloc::vec::Vec<u8>, std::io::error::Error>>::with_context::<alloc::string::String, cargo_util::paths::read_bytes::{closure#0}>
+   5: cargo_util::paths::read
+   6: cargo::core::compiler::fingerprint::prepare_target
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::context::Context>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\core\src\ops/function.rs:284:13
+  17: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  18: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  19: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:48
+  21: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  22: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  23: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  24: std::rt::lang_start_internal
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:20
+  25: main
+  26: __tmainCRTStartup
+  27: mainCRTStartup
+  28: <unknown>
+  29: <unknown>
+   0.083002300s  INFO cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: false }/TargetInner { name: "two_sums", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./two-sums.rs", Edition2021) }
+   0.083020200s  INFO cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\adutt\Documents\project-library\dsa\data-structures\target\debug\.fingerprint\main-131e1cb9913bedfb\bin-two_sums`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace_rs::backtrace::dbghelp::trace
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/dbghelp.rs:131:5
+   1: std::backtrace_rs::backtrace::trace_unsynchronized
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/mod.rs:66:5
+   2: std::backtrace::Backtrace::create
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:331:13
+   3: std::backtrace::Backtrace::capture
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:296:9
+   4: <core::result::Result<alloc::vec::Vec<u8>, std::io::error::Error> as anyhow::Context<alloc::vec::Vec<u8>, std::io::error::Error>>::with_context::<alloc::string::String, cargo_util::paths::read_bytes::{closure#0}>
+   5: cargo_util::paths::read
+   6: cargo::core::compiler::fingerprint::prepare_target
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::context::Context>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\core\src\ops/function.rs:284:13
+  17: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  18: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  19: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:48
+  21: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  22: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  23: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  24: std::rt::lang_start_internal
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:20
+  25: main
+  26: __tmainCRTStartup
+  27: mainCRTStartup
+  28: <unknown>
+  29: <unknown>
+   0.083492400s  INFO cargo::core::compiler::fingerprint: fingerprint error for main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)/Check { test: true }/TargetInner { name: "two_sums", doc: true, ..: with_path("C:\\Users\\adutt\\Documents\\project-library\\dsa\\data-structures\\./two-sums.rs", Edition2021) }
+   0.083509100s  INFO cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\adutt\Documents\project-library\dsa\data-structures\target\debug\.fingerprint\main-7b231d61123d18f3\test-bin-two_sums`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace_rs::backtrace::dbghelp::trace
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/dbghelp.rs:131:5
+   1: std::backtrace_rs::backtrace::trace_unsynchronized
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src\..\..\backtrace\src\backtrace/mod.rs:66:5
+   2: std::backtrace::Backtrace::create
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:331:13
+   3: std::backtrace::Backtrace::capture
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/backtrace.rs:296:9
+   4: <core::result::Result<alloc::vec::Vec<u8>, std::io::error::Error> as anyhow::Context<alloc::vec::Vec<u8>, std::io::error::Error>>::with_context::<alloc::string::String, cargo_util::paths::read_bytes::{closure#0}>
+   5: cargo_util::paths::read
+   6: cargo::core::compiler::fingerprint::prepare_target
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::context::Context>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\core\src\ops/function.rs:284:13
+  17: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  18: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  19: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:48
+  21: std::panicking::try::do_call
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:554:40
+  22: std::panicking::try
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panicking.rs:518:19
+  23: std::panic::catch_unwind
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/panic.rs:142:14
+  24: std::rt::lang_start_internal
+             at /rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04/library\std\src/rt.rs:148:20
+  25: main
+  26: __tmainCRTStartup
+  27: mainCRTStartup
+  28: <unknown>
+  29: <unknown>
     Checking main v0.1.0 (C:\Users\adutt\Documents\project-library\dsa\data-structures)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.10s
+    Finished dev [unoptimized + debuginfo] target(s) in 0.55s
