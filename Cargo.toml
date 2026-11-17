@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+num-bigint = "0.4"
 
 [[bin]]
 name = "two_sums"
@@ -16,3 +17,11 @@ path = "./max_pair_product.rs"
 [[bin]]
 name = "gcd"
 path = "./gcd.rs"
+
+[[bin]]
+name = "lcm"
+path = "./lcm.rs"
+
+[[bin]]
+name = "fibonacci"
+path = "./fibonacci.rs"

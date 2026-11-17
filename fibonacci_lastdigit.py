@@ -1,0 +1,31 @@
+def fibonacci(n):
+    # if n == 0:
+    #     return 0
+    # elif n == 1:
+    #     return 1
+    # else:
+    #     return fibonacci(n - 1) + fibonacci(n - 2)
+    result = []
+    if n <= 0:
+        result.append(0)
+    elif n == 1:
+        result.append(1)
+    else:
+        result.append(0)
+        result.append(1)
+        if n > 100000:
+            start = 100000
+            result = 
+        else:
+            start = 2
+        for i in range(start,n+1):
+            result = result[-2:]
+            result.append(result[- 2] + result[- 1])
+            # result.append(result[i-2] + result[i-1]) 
+    last_digit = result[-1] % 10
+    return last_digit
+
+
+if __name__ == "__main__":
+    n = int(input())
+    print(fibonacci(n))
